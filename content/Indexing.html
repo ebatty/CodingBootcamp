@@ -409,6 +409,10 @@ document.write(`
 </div>
 </div>
 </div>
+<p>We can skip over certain rows/columns with a step count:</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[row</span> <span class="pre">index,</span> <span class="pre">start</span> <span class="pre">index:stop</span> <span class="pre">index:step</span> <span class="pre">count]</span></code></p>
+<p>will get columns from start index up to but not including stop index, skipping every step count.</p>
+<p>In other words, x[0, 0:4:2] would get every second column from column with index 0 to column with index 4 (so columns 0 and 2).</p>
 <p>We can overwrite subsets of our array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
