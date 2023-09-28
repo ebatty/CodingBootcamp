@@ -6,3 +6,4 @@ parts:
     - file: content/Variables.ipynb
     - file: content/MathOperators.ipynb
     - file: content/IntrotoArrays.ipynb
+    - file: content/Session1_Exercises.ipynb
