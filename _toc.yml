@@ -1,1 +1,8 @@
-
+format: jb-book
+root: intro
+parts:
+  - caption: Session 1
+    chapters:
+    - file: content/Variables.ipynb
+    - file: content/MathOperators.ipynb
+    - file: content/IntrotoArrays.ipynb
