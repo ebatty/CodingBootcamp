@@ -14,4 +14,5 @@ parts:
     chapters:
     - file: content/UsingFunctions.ipynb
     - file: content/ComparisonandLogicalOperators.ipynb
+    - file: content/BooleanIndexing.ipynb
     
