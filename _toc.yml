@@ -9,3 +9,4 @@ parts:
     - file: content/ArrayComputations.ipynb
     - file: content/Indexing.ipynb
     - file: content/Session1_Exercises.ipynb
+    - file: content/Session1_Asynchronous.ipynb
