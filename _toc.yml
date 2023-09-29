@@ -10,3 +10,6 @@ parts:
     - file: content/Indexing.ipynb
     - file: content/Session1_Exercises.ipynb
     - file: content/Session1_Asynchronous.ipynb
+  - caption: Session 2
+    - file: content/UsingFunctions.ipynb
+    
