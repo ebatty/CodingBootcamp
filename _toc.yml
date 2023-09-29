@@ -11,6 +11,7 @@ parts:
     - file: content/Session1_Exercises.ipynb
     - file: content/Session1_Asynchronous.ipynb
   - caption: Session 2
+    chapters:
     - file: content/UsingFunctions.ipynb
     - file: content/ComparisonandLogicalOperators.ipynb
     
