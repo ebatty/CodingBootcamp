@@ -435,11 +435,13 @@ Click here for Question 2<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">What is this code doing?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">degrees_F</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">degrees_C</span> <span class="o">=</span> <span class="p">(</span><span class="n">degrees_F</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">degrees_C</span><span class="p">)</span>
+</pre></div>
 </div>
-</details><p>degrees_F = 50
-degrees_C = (degrees_F - 32) * 5/9
-print(degrees_C)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p>Compare your answers to question 1 and 2. You’ll probably see that you were much better able to quickly summarize the core computation happening in question 2. The only difference between these two code snippets is the variable names!</p>
@@ -452,11 +454,13 @@ Click here for Question 3<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">What will c equal? Don’t use code to figure it out</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span>
+</pre></div>
 </div>
-</details><p>a = 4
-b = a**2/2
-c = (a+b)*2</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -474,16 +478,7 @@ Click here for soluton to Question 3<div class="sd-summary-down docutils">
 <h2>Section 3: Array Computations<a class="headerlink" href="#section-3-array-computations" title="Permalink to this heading">#</a></h2>
 <p>During the live session, I gave a short lecture on array computations. Instead of sharing the recording, I’m going to share a more polished video that covers the same content. Please watch the video embedded below. There are some “Coding Challenges” throughout the video - try these out youself as you watch!</p>
 <p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/ArrayComputations.html">Click here to check out notes on array computations to accompany the video</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;h_KYkTFkfNw&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">730</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">410</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Video available at https://youtube.com/watch?v=&quot;</span> <span class="o">+</span> <span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-<span class="n">video</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=h_KYkTFkfNw
 </pre></div>
@@ -510,16 +505,7 @@ Click here for soluton to Question 3<div class="sd-summary-down docutils">
 <h2>Section 4: Indexing<a class="headerlink" href="#section-4-indexing" title="Permalink to this heading">#</a></h2>
 <p>During the live session, I gave a short lecture on indexing. Instead of sharing the recording, I’m going to share a more polished video that covers the same content. Please watch the video embedded below.</p>
 <p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/Indexing.html">Click here for notes on indexing</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;eqSlhR7_jbA&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">730</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">410</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Video available at https://youtube.com/watch?v=&quot;</span> <span class="o">+</span> <span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-<span class="n">video</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=eqSlhR7_jbA
 </pre></div>
