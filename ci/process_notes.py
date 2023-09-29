@@ -75,7 +75,7 @@ def link_hidden_cells(content):
 
             # Check if cell is video one
             if 'YouTubeVideo' in ''.join(cell['source']) or 'IFrame' in ''.join(cell['source']):
-                if "remove-input" not in cell['metadata']['tags']:
+                if "remove-input" not in updated_cell['metadata']['tags']:
                     updated_cell['metadata']['tags'].append("remove-input")
             else:
                 if "hide-input" not in updated_cell['metadata']['tags']:
