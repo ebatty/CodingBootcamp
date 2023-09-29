@@ -12,4 +12,5 @@ parts:
     - file: content/Session1_Asynchronous.ipynb
   - caption: Session 2
     - file: content/UsingFunctions.ipynb
+    - file: content/ComparisonandLogicalOperators.ipynb
     
