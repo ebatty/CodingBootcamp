@@ -16,4 +16,5 @@ parts:
     - file: content/UsingFunctions.ipynb
     - file: content/ComparisonandLogicalOperators.ipynb
     - file: content/BooleanIndexing.ipynb
+    - file: content/Plotting.ipynb
     - file: content/Session2_Exercises.ipynb
