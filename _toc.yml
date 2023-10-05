@@ -8,9 +8,9 @@ parts:
     - file: content/IntrotoArrays.ipynb
     - file: content/ArrayComputations.ipynb
     - file: content/Indexing.ipynb
-    - file: content/Session1_Exercises.ipynb
-    - file: content/Session1_Exercises_Solutions.ipynb
     - file: content/Session1_Asynchronous.ipynb
+    - file: content/Session1_Exercises.ipynb
+    - file: content/Session1_Exercises_Solutions.ipynb    
   - caption: Session 2
     chapters:
     - file: content/UsingFunctions.ipynb
