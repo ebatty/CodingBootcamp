@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Variables &#8212; SURFIN Coding Bootcamp</title>
+    <title>Session 2 Exercises &#8212; SURFIN Coding Bootcamp</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Variables';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Session2_Exercises';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Math Operators" href="MathOperators.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="prev" title="Boolean Indexing" href="BooleanIndexing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,8 +150,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 1</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MathOperators.html">Math Operators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntrotoArrays.html">Intro to Arrays</a></li>
 
@@ -166,12 +165,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Session1_Asynchronous.html">Session 1 Asynchronous Version</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 2</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="UsingFunctions.html">Using Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ComparisonandLogicalOperators.html">Comparison &amp; Logical Operators</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="BooleanIndexing.html">Boolean Indexing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session2_Exercises.html">Session 2 Exercises</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Session 2 Exercises</a></li>
 </ul>
 
     </div>
@@ -226,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Variables.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Session2_Exercises.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/content/Variables.ipynb" target="_blank"
+      <li><a href="../_sources/content/Session2_Exercises.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Variables</h1>
+    <h1>Session 2 Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,10 +366,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-variable">What is a variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-variables">Why do we use variables?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-types-of-data">Other types of data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables">Naming variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spikes-data-part-2">Working with Spikes Data Part 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mystery-arrays">Mystery arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-1">Array 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-2">Array 2</a></li>
 </ul>
             </nav>
         </div>
@@ -382,167 +384,145 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h1>
-<p>Video: Variables</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=DKV78n0cHog
-</pre></div>
-</div>
-<div class="output text_html">
-        <iframe
-            width="730"
-            height="410"
-            src="https://www.youtube.com/embed/DKV78n0cHog?fs=1"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<section id="what-is-a-variable">
-<h2>What is a variable<a class="headerlink" href="#what-is-a-variable" title="Permalink to this heading">#</a></h2>
-<p><img alt="picture" src="https://raw.githubusercontent.com/ebatty/ComputationalBootcamp/master/images/Variables.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">*</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
-</pre></div>
-</div>
-</div>
-</div>
-<p>Variables can change. You can assign a different value to the same variable name.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">n_trials</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="session-2-exercises">
+<h1>Session 2 Exercises<a class="headerlink" href="#session-2-exercises" title="Permalink to this heading">#</a></h1>
+<section id="your-name-here">
+<h2>Your name here<a class="headerlink" href="#your-name-here" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="why-do-we-use-variables">
-<h2>Why do we use variables?<a class="headerlink" href="#why-do-we-use-variables" title="Permalink to this heading">#</a></h2>
-<p>We use variables so we can keep track of data throughout code, and change it easily.</p>
+<section id="working-with-spikes-data-part-2">
+<h2>Working with Spikes Data Part 2<a class="headerlink" href="#working-with-spikes-data-part-2" title="Permalink to this heading">#</a></h2>
+<p>Click here for hint</p>
+<p>Recall Working with Spikes Data from the previous session:</p>
+<p>You worked with an array of spikes counts where the rows were different trials, the columns are different time bins, and the entries were the spike counts during that time bin in that trial. Each time bin is 1 ms.</p>
+<p>This data was simulated but mimicked a situation where a monkey was performing a task where they make repeated reaching movements to the same target. The data was “recorded” from a neuron in the monkey’s motor cortex.</p>
+<p>We are going to work with data in the same format again. We again have an array called <code class="docutils literal notranslate"><span class="pre">spikes</span></code>, but now we have 1000 trials. We have 1500 time bins and in each trial the reach movement onset happens at the 750th time bin.</p>
+<p>The only change is that the reach movement on each trial will be to one of 8 target options, instead of the same target each time. We are going to refer to these target options by the angle of the reach to them.  <code class="docutils literal notranslate"><span class="pre">trial_angles</span></code> is an array of shape (1000,). Each entry contains the reaching angle on that trial.</p>
+<p>The next cell loads in this data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># change this to try out different numbers of trials</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="n">n_heads</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_trials</span><span class="p">):</span>
-    <span class="n">is_it_heads</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-    <span class="n">n_heads</span> <span class="o">+=</span> <span class="n">is_it_heads</span>
-<span class="n">proportion_heads</span> <span class="o">=</span> <span class="n">n_heads</span><span class="o">/</span><span class="n">n_trials</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;In </span><span class="si">{</span><span class="n">n_trials</span><span class="si">}</span><span class="s1"> trials, it came up heads </span><span class="si">{</span><span class="n">proportion_heads</span><span class="si">}</span><span class="s1"> of the time&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In 50 trials, it came up heads 0.42 of the time
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="other-types-of-data">
-<h2>Other types of data<a class="headerlink" href="#other-types-of-data" title="Permalink to this heading">#</a></h2>
-<p>Our data can have different types, not just be numbers. For example, we can have a variable with a value that is a string.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="s1">&#39;a string&#39;</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="naming-variables">
-<h2>Naming variables<a class="headerlink" href="#naming-variables" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Starts with letter and then consists of letters and numbers (no special characters)</p></li>
-<li><p>Should be lowercase with underscores as necessary - no mixedCase</p></li>
-<li><p>Be concise but descriptive!</p></li>
-<li><p>Avoid reserved words</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is a list of the Python keywords.  Enter any keyword to get more help.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-False               class               from                or
-None                continue            global              pass
-True                def                 if                  raise
-and                 del                 import              return
-as                  elif                in                  try
-assert              else                is                  while
-async               except              lambda              with
-await               finally             nonlocal            yield
-break               for                 not                 
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/m5tj3/download&#39;</span><span class="p">)</span>
+<span class="n">spikes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/af84k/download&#39;</span><span class="p">)</span>
+<span class="n">trial_angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.001</span> <span class="c1"># in seconds, each time bin is 1 ms</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Which of these variable names obey Python style?</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">x</span></code>: not very descriptive</p>
-<p><code class="docutils literal notranslate"><span class="pre">rnasequence</span></code>: should be underscore between rna and sequence</p>
-<p><code class="docutils literal notranslate"><span class="pre">mouse_speed</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">temperature&amp;speed</span></code>: special character (&amp;)</p>
-<p><code class="docutils literal notranslate"><span class="pre">fr</span></code>: not very descriptive</p>
-<p><code class="docutils literal notranslate"><span class="pre">frame_rate</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">temperature</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">def</span></code>: reserved word</p>
+<ol class="arabic simple">
+<li><p>What are the 8 different reach options (aka the 8 different angles of reach)?</p></li>
+</ol>
+<p>Print an array with the 8 different reach angles</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Click here for hint</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Hint: trial_angles contains this information but it is</span>
+<span class="sd">1000 entries long with repeats of each reach.</span>
+<span class="sd">Use google to figure out how to get the unique values</span>
+<span class="sd">(include the word numpy in your search)</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Use Boolean indexing to get the trials where the monkey was reaching to a target at 0 degrees. Save this array as a variable called <code class="docutils literal notranslate"><span class="pre">spikes_for_angle_0</span></code>.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>There should be 125 trials with a reach to angle of 0, so the array from Q2 should be 125 by 1500. Check the shape of <code class="docutils literal notranslate"><span class="pre">spikes_for_angle_0_trials</span></code> to make sure it is correct!</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Compute the average firing rate over time of this neuron during trials to angle 0 (i.e. the avearge spike count per time bin). No need to convert to spikes per second, you can leave as spikes per time bin.</p></li>
+</ol>
+<p>Hint: you did this in the session 1 exercises</p>
+<ol class="arabic simple" start="5">
+<li><p>Plot the average firing rate over time of this neuron during trials to angle 0. Label the x and y axis and add a title.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>(Text answer) What happens to the activity of this neuron around movement reach onset (which happens at the 750th time bin)</p></li>
+</ol>
+<ol class="arabic simple" start="7">
+<li><p>We want to compute a single number that summarizes the neural firing rate during reaches to this angle. We only want to consider the time period immediately around the movement onset, so in time bins 500 up to 1000. Can you figure out how to get the average spike count in time bins 500 up to 1000 across all trials to reach angle of 0? Try to do it in 1 to 2 lines of code, starting with the original <code class="docutils literal notranslate"><span class="pre">spikes</span></code> data.</p></li>
+</ol>
+<p>Hint 1</p>
+<p>Hint 2</p>
+<ol class="arabic simple" start="8">
+<li><p>Can you convert this to an average firing rate in spikes per second?</p></li>
+</ol>
+<ol class="arabic simple" start="9">
+<li><p>What is the single average firing rate in spikes per second for trials where the reach is to angle 135?</p></li>
+</ol>
+<ol class="arabic simple" start="10">
+<li><p>(Text answer) Given the two numbers in Q8 and 9, do you think this neuron’s activity could be correlated with (i.e. varies with) the direction of reach?</p></li>
+</ol>
+</section>
+<section id="mystery-arrays">
+<h2>Mystery arrays<a class="headerlink" href="#mystery-arrays" title="Permalink to this heading">#</a></h2>
+<section id="array-1">
+<h3>Array 1<a class="headerlink" href="#array-1" title="Permalink to this heading">#</a></h3>
+<p>The cell below loads in mystery data into an array called <code class="docutils literal notranslate"><span class="pre">x</span></code>. Try to figure out the “secret” contained in this data by plotting it in different ways.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/3sd2p/download&#39;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is the secret in this data?</p>
+<p>Your answer here</p>
+</section>
+</section>
+<section id="array-2">
+<h2>Array 2<a class="headerlink" href="#array-2" title="Permalink to this heading">#</a></h2>
+<p>The cell below loads in mystery data into an array called x. Try to figure out how this data was generated by plotting it in different ways or looking at the data in other ways.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 1</span>
+
+<span class="c1"># Try to plot it as an image. Make sure to add a colorbar!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 2</span>
+
+<span class="c1"># Try plotting all the values in a histogram</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/2saj7/download&#39;</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What does this array consist of?</p>
+<p>Your answer here</p>
 </section>
 </section>
 
@@ -578,22 +558,13 @@ break               for                 not
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="BooleanIndexing.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Boolean Indexing</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="MathOperators.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Math Operators</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -613,10 +584,13 @@ break               for                 not
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-variable">What is a variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-variables">Why do we use variables?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-types-of-data">Other types of data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables">Naming variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spikes-data-part-2">Working with Spikes Data Part 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mystery-arrays">Mystery arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-1">Array 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-2">Array 2</a></li>
 </ul>
   </nav></div>
 
