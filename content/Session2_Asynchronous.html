@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Variables &#8212; SURFIN Coding Bootcamp</title>
+    <title>Session 2 Asynchronous Version &#8212; SURFIN Coding Bootcamp</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Variables';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Session2_Asynchronous';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Math Operators" href="MathOperators.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="next" title="Session 2 Exercises" href="Session2_Exercises.html" />
+    <link rel="prev" title="Plotting" href="Plotting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,8 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 1</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MathOperators.html">Math Operators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntrotoArrays.html">Intro to Arrays</a></li>
 
@@ -167,13 +167,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Session1_Exercises_Solutions.html">Session 1 Exercises Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 2</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="UsingFunctions.html">Using Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ComparisonandLogicalOperators.html">Comparison &amp; Logical Operators</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="BooleanIndexing.html">Boolean Indexing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Plotting.html">Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Session2_Asynchronous.html">Session 2 Asynchronous Version</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Session 2 Asynchronous Version</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session2_Exercises.html">Session 2 Exercises</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 3</span></p>
@@ -234,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Variables.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Session2_Asynchronous.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/content/Variables.ipynb" target="_blank"
+      <li><a href="../_sources/content/Session2_Asynchronous.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Variables</h1>
+    <h1>Session 2 Asynchronous Version</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,10 +375,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-variable">What is a variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-variables">Why do we use variables?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-types-of-data">Other types of data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables">Naming variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-session-1-exercise-recap-boolean-indexing">Section 1: Session 1 Exercise Recap &amp; Boolean Indexing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-plotting">Section 2: Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -390,167 +394,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h1>
-<p>Video: Variables</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=DKV78n0cHog
-</pre></div>
-</div>
-<div class="output text_html">
-        <iframe
-            width="730"
-            height="410"
-            src="https://www.youtube.com/embed/DKV78n0cHog?fs=1"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<section id="what-is-a-variable">
-<h2>What is a variable<a class="headerlink" href="#what-is-a-variable" title="Permalink to this heading">#</a></h2>
-<p><img alt="picture" src="https://raw.githubusercontent.com/ebatty/ComputationalBootcamp/master/images/Variables.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">*</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
-</pre></div>
-</div>
-</div>
-</div>
-<p>Variables can change. You can assign a different value to the same variable name.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">n_trials</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="why-do-we-use-variables">
-<h2>Why do we use variables?<a class="headerlink" href="#why-do-we-use-variables" title="Permalink to this heading">#</a></h2>
-<p>We use variables so we can keep track of data throughout code, and change it easily.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_trials</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># change this to try out different numbers of trials</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="n">n_heads</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_trials</span><span class="p">):</span>
-    <span class="n">is_it_heads</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-    <span class="n">n_heads</span> <span class="o">+=</span> <span class="n">is_it_heads</span>
-<span class="n">proportion_heads</span> <span class="o">=</span> <span class="n">n_heads</span><span class="o">/</span><span class="n">n_trials</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;In </span><span class="si">{</span><span class="n">n_trials</span><span class="si">}</span><span class="s1"> trials, it came up heads </span><span class="si">{</span><span class="n">proportion_heads</span><span class="si">}</span><span class="s1"> of the time&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In 50 trials, it came up heads 0.54 of the time
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="other-types-of-data">
-<h2>Other types of data<a class="headerlink" href="#other-types-of-data" title="Permalink to this heading">#</a></h2>
-<p>Our data can have different types, not just be numbers. For example, we can have a variable with a value that is a string.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="s1">&#39;a string&#39;</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="naming-variables">
-<h2>Naming variables<a class="headerlink" href="#naming-variables" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="session-2-asynchronous-version">
+<h1>Session 2 Asynchronous Version<a class="headerlink" href="#session-2-asynchronous-version" title="Permalink to this heading">#</a></h1>
+<p>Hello! This page is designed for SURFIN fellows who were unable to make the live session of the coding bootcamp on 10/05. It’ll take you through the concepts we learned and exercises we did.</p>
+<p>There are 3 help sessions a week on zoom (see emails/slack for zoom link):</p>
+<ul class="simple">
+<li><p>Mondays at 6 pm EST</p></li>
+<li><p>Tuesdays at 9 am EST</p></li>
+<li><p>Thursdays at 1 pm EST</p></li>
+</ul>
+<p>We highly recommend dropping by one of these help sessions to work through the exercises or clarify concepts if you miss a live session! You don’t need specific questions to show up - you can just come and work through content in the zoom room so you can ask questions as you go.</p>
+<p>Before proceeding, please make sure you’ve watch the two videos students were expected to watch ahead of the live session:</p>
 <ol class="arabic simple">
-<li><p>Starts with letter and then consists of letters and numbers (no special characters)</p></li>
-<li><p>Should be lowercase with underscores as necessary - no mixedCase</p></li>
-<li><p>Be concise but descriptive!</p></li>
-<li><p>Avoid reserved words</p></li>
+<li><p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/UsingFunctions.html">Using Functions</a></p></li>
+<li><p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/ComparisonandLogicalOperators.html">Conditional and Logical Operators</a></p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is a list of the Python keywords.  Enter any keyword to get more help.
-
-False               class               from                or
-None                continue            global              pass
-True                def                 if                  raise
-and                 del                 import              return
-as                  elif                in                  try
-assert              else                is                  while
-async               except              lambda              with
-await               finally             nonlocal            yield
-break               for                 not                 
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Which of these variable names obey Python style?</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">x</span></code>: not very descriptive</p>
-<p><code class="docutils literal notranslate"><span class="pre">rnasequence</span></code>: should be underscore between rna and sequence</p>
-<p><code class="docutils literal notranslate"><span class="pre">mouse_speed</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">temperature&amp;speed</span></code>: special character (&amp;)</p>
-<p><code class="docutils literal notranslate"><span class="pre">fr</span></code>: not very descriptive</p>
-<p><code class="docutils literal notranslate"><span class="pre">frame_rate</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">temperature</span></code>: perfect</p>
-<p><code class="docutils literal notranslate"><span class="pre">def</span></code>: reserved word</p>
+<section id="section-1-session-1-exercise-recap-boolean-indexing">
+<h2>Section 1: Session 1 Exercise Recap &amp; Boolean Indexing<a class="headerlink" href="#section-1-session-1-exercise-recap-boolean-indexing" title="Permalink to this heading">#</a></h2>
+<p>First, please watch the first 23 minutes of our recorded live session.</p>
+<p><a class="reference external" href="https://us06web.zoom.us/rec/share/9H9aYtAbEb2bggxtLZvBW3-GZlSEEbAiZwfIDkk57ukq1vI82cBNQ3fvhFgb7J7x.iPGpCCaCRVtIITru">Click here for recording</a></p>
+<p>Please check email/slack for the passcode for the recording.</p>
+<p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/BooleanIndexing.html">Here</a> are notes on Boolean indexing for review</p>
+<section id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h3>
+<p>Try out <a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/Session2_Exercises.html">Working with Spikes Data Part 2</a> at least through question 7. Remember to come to a help session to work through it if you get stuck!</p>
+</section>
+</section>
+<section id="section-2-plotting">
+<h2>Section 2: Plotting<a class="headerlink" href="#section-2-plotting" title="Permalink to this heading">#</a></h2>
+<p>Next, watch from 23:00 to the end of the recording from the live session:</p>
+<p><a class="reference external" href="https://us06web.zoom.us/rec/share/9H9aYtAbEb2bggxtLZvBW3-GZlSEEbAiZwfIDkk57ukq1vI82cBNQ3fvhFgb7J7x.iPGpCCaCRVtIITru">Click here for recording</a></p>
+<p>Please check email/slack for the passcode for the recording.</p>
+<p><a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/Plotting.html">Here</a> are notes on Plotting for review</p>
+<section id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h3>
+<p>Now, try to figure out the secret in mystery array 1 in the <a class="reference external" href="https://ebatty.github.io/CodingBootcamp/content/Session2_Exercises.html">Mystery Array exercise</a>.</p>
+</section>
 </section>
 </section>
 
@@ -586,20 +465,20 @@ break               for                 not
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="Plotting.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Plotting</p>
       </div>
     </a>
     <a class="right-next"
-       href="MathOperators.html"
+       href="Session2_Exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Math Operators</p>
+        <p class="prev-next-title">Session 2 Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -621,10 +500,14 @@ break               for                 not
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-variable">What is a variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-variables">Why do we use variables?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-types-of-data">Other types of data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-variables">Naming variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-session-1-exercise-recap-boolean-indexing">Section 1: Session 1 Exercise Recap &amp; Boolean Indexing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-plotting">Section 2: Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
