@@ -17,7 +17,7 @@ parts:
     - file: content/ComparisonandLogicalOperators.ipynb
     - file: content/BooleanIndexing.ipynb
     - file: content/Plotting.ipynb
-    - file: content/Session1_Asynchronous.ipynb
+    - file: content/Session2_Asynchronous.ipynb
     - file: content/Session2_Exercises.ipynb
   - caption: Session 3
     chapters:
