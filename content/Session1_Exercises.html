@@ -426,12 +426,12 @@ document.write(`
 <li><p>How many time bins are in this data?</p></li>
 </ol>
 <ol class="arabic simple" start="3">
-<li><p>What is the average spike count in a time bin?</p></li>
+<li><p>What is the average spike count in a time bin? We want a single number that is the average spike count over all of the data (every trial and every time bin)</p></li>
 </ol>
 <ol class="arabic simple" start="4">
 <li><p>Compute the average spike count per time bin</p></li>
 </ol>
-<p>We want to know the average spike count at each time bin (so the average over trials).</p>
+<p>We want to know the average spike count at each time bin (so the average over trials). This means we want the average of each column</p>
 <ol class="arabic simple" start="5">
 <li><p>Compute the average spike count per time bin but convert it to units of spikes/second instead of spikes/time bin. Store as a variable called PSTH (peri-stimulus time histogram). This will give you an estimate of the average firing rate in spikes per second over time during this task.</p></li>
 </ol>
@@ -449,7 +449,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2063</span><span class="o">/</span><span class="mf">3821120907.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2078</span><span class="o">/</span><span class="mf">3821120907.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">PSTH</span><span class="p">)</span>
@@ -506,7 +506,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f5363380750&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fc623a7af50&gt;
 </pre></div>
 </div>
 <img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
@@ -527,7 +527,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f536330f190&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fc62374b6d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
@@ -548,7 +548,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f536328f510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fc6236cba50&gt;
 </pre></div>
 </div>
 <img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
