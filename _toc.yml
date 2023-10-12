@@ -19,7 +19,9 @@ parts:
     - file: content/Plotting.ipynb
     - file: content/Session2_Asynchronous.ipynb
     - file: content/Session2_Exercises.ipynb
+    - file: content/Session2_Exercises_Solutions.ipynb
   - caption: Session 3
     chapters:
     - file: content/IfStatements.ipynb
     - file: content/ForLoops.ipynb
+    - file: content/Session3_Exercises.ipynb
