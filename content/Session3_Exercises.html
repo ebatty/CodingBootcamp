@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Session 3 Exercises &#8212; SURFIN Coding Bootcamp</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Session3_Exercises';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="For Loops" href="ForLoops.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">SURFIN Coding Bootcamp</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MathOperators.html">Math Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntrotoArrays.html">Intro to Arrays</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="ArrayComputations.html">Array Computations</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Indexing.html">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session1_Asynchronous.html">Session 1 Asynchronous Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session1_Exercises.html">Session 1 Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session1_Exercises_Solutions.html">Session 1 Exercises Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="UsingFunctions.html">Using Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComparisonandLogicalOperators.html">Comparison &amp; Logical Operators</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="BooleanIndexing.html">Boolean Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session2_Asynchronous.html">Session 2 Asynchronous Version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session2_Exercises.html">Session 2 Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Session2_Exercises_Solutions.html">Session 2 Exercises Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="IfStatements.html">If statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ForLoops.html">For Loops</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Session 3 Exercises</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Session3_Exercises.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/Session3_Exercises.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Session 3 Exercises</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Session 3 Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-for-loop-if-statement-practice">Section 1: For loop &amp; if statement practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-problem-4-check-if-number-is-prime">(Optional): Problem 4: Check if number is prime</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-working-with-spikes-part-3">Section 2: Working with Spikes Part 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-for-additional-practice-section-3-monty-hall-problem">(Optional for additional practice) Section 3: Monty Hall Problem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-game">Setting up the game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#player-choice">Player choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#host-reveal">Host reveal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-winner">Determining winner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together">Putting it all together</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="session-3-exercises">
+<h1>Session 3 Exercises<a class="headerlink" href="#session-3-exercises" title="Permalink to this heading">#</a></h1>
+<section id="your-name-here">
+<h2>Your name here<a class="headerlink" href="#your-name-here" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="section-1-for-loop-if-statement-practice">
+<h1>Section 1: For loop &amp; if statement practice<a class="headerlink" href="#section-1-for-loop-if-statement-practice" title="Permalink to this heading">#</a></h1>
+<section id="problem-1">
+<h2>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this heading">#</a></h2>
+<p>Without running the code, what would <code class="docutils literal notranslate"><span class="pre">count</span></code> equal after running this code?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">18</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">14</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Your answer here</p>
+</section>
+<section id="problem-2">
+<h2>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this heading">#</a></h2>
+<p>Write code that uses variable <code class="docutils literal notranslate"><span class="pre">n</span></code> representing a number and outputs the following:</p>
+<p>If the number is a multiple of 3, print Fizz</p>
+<p>If the number is a multiple of 5, print Buzz</p>
+<p>If the number is a multiple of both 3 and 5, print FizzBuzz</p>
+<p>Otherwise, print the number</p>
+<p>For example, n = 15 should lead to ‘Fizzbuzz’, n = 4 should lead to 4, and n = 5 should lead to ‘Buzz’.</p>
+<p><strong>Start by figuring out the logical flow for this, then move to the actual code</strong></p>
+</section>
+<section id="problem-3">
+<h2>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this heading">#</a></h2>
+<p>Write a for loop that calculates the summed value of array <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Note that we could use <code class="docutils literal notranslate"><span class="pre">np.sum(x)</span></code> but I want you to practice a for loop</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-problem-4-check-if-number-is-prime">
+<h2>(Optional): Problem 4: Check if number is prime<a class="headerlink" href="#optional-problem-4-check-if-number-is-prime" title="Permalink to this heading">#</a></h2>
+<p>Given a numerical value of variable <code class="docutils literal notranslate"><span class="pre">num</span></code>, determine whether it is prime or not.</p>
+<p>Use the print function to report if the number is prime or not: print(‘Number is NOT prime’)  or print(‘Number is prime’).</p>
+<p>Check it’s working by changing the value of <code class="docutils literal notranslate"><span class="pre">num</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="section-2-working-with-spikes-part-3">
+<h1>Section 2: Working with Spikes Part 3<a class="headerlink" href="#section-2-working-with-spikes-part-3" title="Permalink to this heading">#</a></h1>
+<p>We’re going to work with the same spike count data as in Session 2.</p>
+<p>We have an array called <code class="docutils literal notranslate"><span class="pre">spikes</span></code> with 1000 trials (rows). We have 1500 time bins (columns) and in each trial the reach movement onset happens at the 750th time bin.</p>
+<p>The reach movement on each trial is to one of 8 target options. We refer to these target options by the angle of the reach to them.  <code class="docutils literal notranslate"><span class="pre">trial_angles</span></code> is an array of shape (1000,). Each entry contains the reaching angle on that trial.</p>
+<p>The next cell loads in this data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/m5tj3/download&#39;</span><span class="p">)</span>
+<span class="n">spikes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/af84k/download&#39;</span><span class="p">)</span>
+<span class="n">trial_angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.001</span> <span class="c1"># in seconds, each time bin is 1 ms</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Session 2 exercises, we asked you to compute an average response of the neuron to reaches to angle 0. Specifically, we wanted to take the average spike count between time bins with index 500 to time bin with index 1000 across all trials where the monkey reached to angle 0. We then convert to spikes per second by dividing by dt.</p>
+<p>The following code implements this computation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">spikes</span><span class="p">[</span><span class="n">trial_angles</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span><span class="o">/</span><span class="n">dt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also got the unique reach angles using the <code class="docutils literal notranslate"><span class="pre">np.unique</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unique_reach_angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">trial_angles</span><span class="p">)</span>
+<span class="n">unique_reach_angles</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  0,  45,  90, 135, 180, 225, 270, 315], dtype=int32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to compute the neuron’s mean response to each of the 8 reaching angles (using our computation from above). We can then plot how the neural response changes with reach angle. The following exercises will walk you through this but <em>challenge mode</em> if you have more prior coding experience is to try to do this with only the above information.</p>
+<ol class="arabic simple">
+<li><p>We want to loop through the different reach angle options (to later compute the neural response to reaches to that angle). Create a for loop where you loop through the different reach angles. For now, print the reach angle on each loop.</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Now, we want to add in our computation within this for loop. Copy and paste your code from Q1 below as a starting point. Now, instead of printing the reach angle on each loop, update your code so that you are computing the mean neural response to reaches to that angle. Print the mean neural response to each reach angle.</p></li>
+</ol>
+<p>Hint: You should be able to use some code from above</p>
+<ol class="arabic simple" start="3">
+<li><p>Now, we need to store the information we’re computing somewhere (otherwise it gets overwritten on each iteration of the loop). Let’s create an array with the same number of entries as we have unique reach angles. The value of each of these entries can be 0 for now. Call this variable <code class="docutils literal notranslate"><span class="pre">firing_rate_per_angle</span></code>.</p></li>
+</ol>
+<p>Hint: You’ll need to google to figure out how to create an array of zeros.</p>
+<ol class="arabic simple" start="4">
+<li><p>Before getting back to the for loop, let’s think about how we’d update an entry in <code class="docutils literal notranslate"><span class="pre">firing_rate_per_angle</span></code> to contain the neural response to a given angle. We want the first entry to reflect the mean neural response to angle 0 (since that is the first entry in <code class="docutils literal notranslate"><span class="pre">unique_reaching_angles</span></code>).</p></li>
+</ol>
+<p>Update the first entry of <code class="docutils literal notranslate"><span class="pre">firing_rate_per_angle</span></code> to reflect the mean neural response for reaches to angle 0.</p>
+<ol class="arabic simple" start="5">
+<li><p>Now put together your answers to Q2, Q3, and Q4 so that you are filling in <code class="docutils literal notranslate"><span class="pre">firing_rate_per_angle</span></code> within the for loop over reach angles. Each entry should contain the neural response to reaches to the angle that is in the corresponding entry in <code class="docutils literal notranslate"><span class="pre">unique_reaching_angles</span></code></p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Plot the firing rate of the neuron to different angles vs the angles. Don’t forget to label axes and add a title!</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="optional-for-additional-practice-section-3-monty-hall-problem">
+<h1>(Optional for additional practice) Section 3: Monty Hall Problem<a class="headerlink" href="#optional-for-additional-practice-section-3-monty-hall-problem" title="Permalink to this heading">#</a></h1>
+<p>The Monty Hall problem is a well known probability puzzle with results that are counterintuitive to many. We are going to simulate the Monty Hall problem.</p>
+<p>The problem: You are on a game show and are faced with three doors. Behind one door is a car, behind the others are goats. Even though goats are cute, you want the car.</p>
+<p>The sequence of the game is:</p>
+<ol class="arabic simple">
+<li><p>You pick a door (for example door 0).</p></li>
+<li><p>The host opens another door (door 1), which has a goat. Note that the host always opens a door with no prize (he will not reveal the car).</p></li>
+<li><p>The host then asks you if you want to stay with door 0 or switch to door 2. You get whatever is behind the door you choose.</p></li>
+</ol>
+<p><strong>Should you switch?</strong> Discuss with your group what your strategy would be</p>
+<p>We can solve this analytically through probabilities but to practice our coding, let’s simulate the game and see whether it’s better to stay or switch. We will simulate 1000 versions of the game show and determine the best strategy (stay or switch).</p>
+<p>In our simulations, we will assume that the player always chooses to stay with their original door and will compute the percentage of the time they win with a stay strategy (you can subtract this quantity from 100 to get the percentage of time they will win with a switch strategy).</p>
+<p><strong>Challenge mode:</strong> I walk you through the steps of creating a simulation in this section. If you want to think through the logic of the game yourself, feel free to complete this problem with just the information above!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># challenge mode here: figure out the percentage of time you&#39;d win with a stay strategy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="setting-up-the-game">
+<h2>Setting up the game<a class="headerlink" href="#setting-up-the-game" title="Permalink to this heading">#</a></h2>
+<p>Let’s first go through a single play of the game. We can loop over simulations later.</p>
+<p>To set up the game, we need to know which door has the prize behind it. Randomly choose one the doors (0, 1, or 2) and assign it as the prize door.</p>
+<p>Hint: you will use the numpy random library for this. Check out numpy randint: https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code to choose a prize door here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="player-choice">
+<h2>Player choice<a class="headerlink" href="#player-choice" title="Permalink to this heading">#</a></h2>
+<p>The player needs to decide on a door. Randomly choose one of the doors and assign it as the chosen door.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code to get the players choice of doors here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="host-reveal">
+<h2>Host reveal<a class="headerlink" href="#host-reveal" title="Permalink to this heading">#</a></h2>
+<p>Next, the host will reveal one of the remaining doors that does not have a prize behind it. To do this, we need to choose a door that is not the chosen door nor the prize door. Assign this door as the revealed door.</p>
+<p>Note, I don’t care about randomness here. For example, if the player chooses door 1 and it has the prize behind it, the host can always pick the first prize-free door (0) instead of randomly picking between doors 0 and 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code for host reveal here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="determining-winner">
+<h2>Determining winner<a class="headerlink" href="#determining-winner" title="Permalink to this heading">#</a></h2>
+<p>We need to figure out whether the player has won if they stay with their original door (i.e. whether that door has the prize).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code to determine if the player won</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this heading">#</a></h2>
+<p>We’ve now coded one play of the game! Take all your
+previous code and put it together (i.e. copy and paste below). Now loop over it to generate 1000 simulations. Keep track of how many times the player wins by staying with their door.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code to loop over simulations</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Print the proportion of the time the player won over the 1000 simulations if they always chose to stay with their original door.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">win_proportion</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># your code here</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The proportion of wins is </span><span class="si">{</span><span class="n">win_proportion</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The proportion of wins is Ellipsis
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you played this game, would you stay or switch?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "ebatty/CodingBootcamp",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ForLoops.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">For Loops</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Session 3 Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-for-loop-if-statement-practice">Section 1: For loop &amp; if statement practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-problem-4-check-if-number-is-prime">(Optional): Problem 4: Check if number is prime</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-working-with-spikes-part-3">Section 2: Working with Spikes Part 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-for-additional-practice-section-3-monty-hall-problem">(Optional for additional practice) Section 3: Monty Hall Problem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-game">Setting up the game</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#player-choice">Player choice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#host-reveal">Host reveal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-winner">Determining winner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together">Putting it all together</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Batty
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
