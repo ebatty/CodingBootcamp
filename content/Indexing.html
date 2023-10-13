@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Indexing</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="Session1_Asynchronous.html">Session 1 Asynchronous Version</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session1_Exercises.html">Session 1 Exercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Session1_Exercises_Solutions.html">Session 1 Exercises Solutions</a></li>
@@ -353,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -369,6 +372,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Indexing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-into-1d-arrays">Indexing into 1D arrays</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -475,6 +488,45 @@ document.write(`
 </div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="indexing-into-1d-arrays">
+<h1>Indexing into 1D arrays<a class="headerlink" href="#indexing-into-1d-arrays" title="Permalink to this heading">#</a></h1>
+<p>So far, we’ve assumed we have a 2-dimensional array with rows and columns. What if our array is 1-dimensional (so does not have columns)? Let’s look at an example of this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we look at the shape of y, we can see it has 3 rows and no columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>To index into a 1D array like <code class="docutils literal notranslate"><span class="pre">y</span></code>, we can just specify a row index and not bother with a column index:</p>
+<p><code class="docutils literal notranslate"><span class="pre">y[row</span> <span class="pre">index]</span></code></p>
+<p>So, we could get the 2nd entry of y with <code class="docutils literal notranslate"><span class="pre">y[1]</span></code> for example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -534,6 +586,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Indexing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-into-1d-arrays">Indexing into 1D arrays</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
