@@ -24,4 +24,4 @@ parts:
     chapters:
     - file: content/IfStatements.ipynb
     - file: content/ForLoops.ipynb
-    # - file: content/Session3_Exercises.ipynb
+    - file: content/Session3_Exercises.ipynb
