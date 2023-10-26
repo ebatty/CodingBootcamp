@@ -30,4 +30,7 @@ parts:
     chapters:
     - file: content/Session4_AsynchronousVersion.ipynb
     - file: content/Session4_Framework.ipynb
-    
+  - caption: Session 5
+    chapters:
+    - file: content/Session5_DNAParsing.ipynb
+    - file: content/Session5_FunctionsPractice.ipynb  
