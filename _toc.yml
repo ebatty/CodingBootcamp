@@ -28,5 +28,6 @@ parts:
     - file: content/Session3_Exercises.ipynb
   - caption: Session 3
     chapters:
+    - file: content/Session2_AsynchronousVersion.ipynb
     - file: content/Session4_Framework.ipynb
     
