@@ -32,5 +32,5 @@ parts:
     - file: content/Session4_Framework.ipynb
   - caption: Session 5
     chapters:
-    - file: content/Session5_DNAParsing.ipynb
-    - file: content/Session5_FunctionsPractice.ipynb  
+    - file: content/DNAParsing.ipynb
+    - file: content/FunctionsPractice.ipynb  
