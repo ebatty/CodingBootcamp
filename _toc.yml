@@ -32,6 +32,7 @@ parts:
     - file: content/Session4_Framework.ipynb
   - caption: Session 5
     chapters:
+    - file: content/PythonDataTypes.ipynb  
     - file: content/DNAParsing.ipynb
     - file: content/FunctionsPractice.ipynb  
-    - file: content/PythonDataTypes.ipynb  
+    
