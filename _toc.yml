@@ -34,5 +34,6 @@ parts:
     chapters:
     - file: content/PythonDataTypes.ipynb  
     - file: content/DNAParsing.ipynb
+    - file: content/WritingFunctions.ipynb  
     - file: content/FunctionsPractice.ipynb  
     
