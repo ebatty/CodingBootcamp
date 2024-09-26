@@ -352,7 +352,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spike-data">Working with Spike Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-manipulation">Image Manipulation</a></li>
 </ul>
             </nav>
         </div>
@@ -364,7 +363,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="session-1-exercises">
+  <p><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/Session1_Exercises.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="session-1-exercises">
 <h1>Session 1 Exercises<a class="headerlink" href="#session-1-exercises" title="Permalink to this heading">#</a></h1>
 <section id="your-name-here">
 <h2>Your name here<a class="headerlink" href="#your-name-here" title="Permalink to this heading">#</a></h2>
@@ -394,21 +394,25 @@ document.write(`
 </div>
 </div>
 <ol class="arabic simple">
-<li><p>How many trials is contained in this data?</p></li>
+<li><p>How many trials are contained in this data?</p></li>
 </ol>
+<p>Write your answer here (double click on cell to edit it)</p>
 <ol class="arabic simple" start="2">
 <li><p>How many time bins are in this data?</p></li>
 </ol>
+<p>Write your answer here (double click on cell to edit it)</p>
 <ol class="arabic simple" start="3">
-<li><p>What is the average spike count in a time bin? We want a single number that is the average spike count over all of the data (every trial and every time bin)</p></li>
+<li><p>What is the average spike count? We want a single number that is the average spike count over all of the data (every trial and every time bin)</p></li>
 </ol>
+<p>Write your answer here (double click on cell to edit it)</p>
 <ol class="arabic simple" start="4">
-<li><p>Compute the average spike count per time bin</p></li>
+<li><p>Next, we want to average the spike counts over the trials, so we can look at how the average spike count changes over time.</p></li>
 </ol>
-<p>We want to know the average spike count at each time bin (so the average over trials). This means we want the average of each column</p>
+<p>Write code to compute the average spike count across trials for every time bin. Store this in a variable called <code class="docutils literal notranslate"><span class="pre">average_spike_counts</span></code>.</p>
 <ol class="arabic simple" start="5">
-<li><p>Compute the average spike count per time bin as in Q4, but now convert it to units of spikes/second instead of spikes/time bin. Store as a variable called PSTH (peri-stimulus time histogram). This will give you an estimate of the average firing rate in spikes per second over time during this task.</p></li>
+<li><p>Take your result from Q4, but now convert it to units of spikes/second instead of spikes/time bin. Store as a variable called <code class="docutils literal notranslate"><span class="pre">PSTH</span></code> (peri-stimulus time histogram).</p></li>
 </ol>
+<p>This will give you an estimate of the average firing rate in spikes per second over time during this task.</p>
 <p>The next cell will plot the PSTH you just computed (we’ll cover plotting soon!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -423,7 +427,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1829</span><span class="o">/</span><span class="mf">3821120907.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1860</span><span class="o">/</span><span class="mf">3821120907.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">PSTH</span><span class="p">)</span>
@@ -439,95 +443,6 @@ document.write(`
 <ol class="arabic simple" start="6">
 <li><p>What is the maximum average firing rate of the neuron? (the max of the PSTH)</p></li>
 </ol>
-</section>
-<section id="image-manipulation">
-<h2>Image Manipulation<a class="headerlink" href="#image-manipulation" title="Permalink to this heading">#</a></h2>
-<p>The next cell automatically downloads the image (file name dog.jpg) and loads it in directly as numpy array img (should work in either Google Colab or jupyter notebook locally).</p>
-<p>Loading in data that exists locally (if you are using a jupyter notebook for example) isn’t as complicated.</p>
-<p>You could use plt.imread(‘dog.jpg’, format = ‘jpg’) If you’d like to download the data locally, you can get it from https://osf.io/35azg/.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">io</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/35azg/download&#39;</span><span class="p">)</span>
-
-<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We will write some code to display the image (we will cover plotting soon!).</p>
-<ol class="arabic simple">
-<li><p>Print the entry in the third row and second column of the image</p></li>
-</ol>
-<ol class="arabic simple" start="2">
-<li><p>Print the second row of the image</p></li>
-</ol>
-<ol class="arabic simple" start="3">
-<li><p>Create a new version of img where the 20 columns on the left and right edge of the image are equal to the minimum of the image.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First let&#39;s copy the image so we don&#39;t overwrite our original image</span>
-<span class="n">new_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
-<span class="o">...</span> <span class="c1"># your code here</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">new_img</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f7fdff30c90&gt;
-</pre></div>
-</div>
-<img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
-</div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Create a new version of the image where the 20 rows on the top and bottom of the image are equal to the maximum of the image.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First let&#39;s copy the image so we don&#39;t overwrite our original image</span>
-<span class="n">new_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
-<span class="o">...</span> <span class="c1"># your code here</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">new_img</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f7fdfe4ed10&gt;
-</pre></div>
-</div>
-<img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
-</div>
-</div>
-<ol class="arabic simple" start="5">
-<li><p>Create a new version of the image where every 3rd column is set equal to the average value of the image</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First let&#39;s copy the image so we don&#39;t overwrite our original image</span>
-<span class="n">new_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
-<span class="o">...</span> <span class="c1"># your code here</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">new_img</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f7fded9db90&gt;
-</pre></div>
-</div>
-<img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
-</div>
-</div>
 </section>
 </section>
 
@@ -591,7 +506,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-name-here">Your name here</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spike-data">Working with Spike Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-manipulation">Image Manipulation</a></li>
 </ul>
   </nav></div>
 
