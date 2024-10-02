@@ -11,12 +11,12 @@ parts:
     # - file: content/Session1_Asynchronous.ipynb
     - file: content/Session1_Notes_Framework.ipynb
     - file: content/Session1_Exercises.ipynb
-   - caption: Session 1 Review Videos
+  - caption: Session 1 Review Videos
     chapters:
-     - file: content/Variables.ipynb
-     - file: content/MathOperators.ipynb
-     - file: content/IntrotoArrays.ipynb
-     - file: content/ArrayComputations.ipynb
+    - file: content/Variables.ipynb
+    - file: content/MathOperators.ipynb
+    - file: content/IntrotoArrays.ipynb
+    - file: content/ArrayComputations.ipynb
     # - file: content/Session1_Exercises_Solutions.ipynb    
   # - caption: Session 2
   #   chapters:
