@@ -13,7 +13,7 @@ parts:
     - file: content/Session1_Exercises.ipynb
    - caption: Session 1 Review Videos
     chapters:
-   - file: content/Variables.ipynb
+     - file: content/Variables.ipynb
      - file: content/MathOperators.ipynb
      - file: content/IntrotoArrays.ipynb
      - file: content/ArrayComputations.ipynb
