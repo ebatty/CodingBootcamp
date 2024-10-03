@@ -18,14 +18,15 @@ parts:
     - file: content/IntrotoArrays.ipynb
     - file: content/ArrayComputations.ipynb
     # - file: content/Session1_Exercises_Solutions.ipynb    
-  # - caption: Session 2
-  #   chapters:
+  - caption: Session 2
+    chapters:
   #   - file: content/UsingFunctions.ipynb
   #   - file: content/ComparisonandLogicalOperators.ipynb
   #   - file: content/BooleanIndexing.ipynb
   #   - file: content/Plotting.ipynb
   #   - file: content/Session2_Asynchronous.ipynb
-  #   - file: content/Session2_Exercises.ipynb
+     - file: content/Session2_Notes_Framework.ipynb
+     - file: content/Session2_Exercises.ipynb
   #   - file: content/Session2_Exercises_Solutions.ipynb
   # - caption: Session 3
   #   chapters:
