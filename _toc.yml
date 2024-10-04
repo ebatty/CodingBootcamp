@@ -17,8 +17,7 @@ parts:
     - file: content/Variables.ipynb
     - file: content/MathOperators.ipynb
     - file: content/IntrotoArrays.ipynb
-    - file: content/ArrayComputations.ipynb
-    # - file: content/Session1_Exercises_Solutions.ipynb    
+    - file: content/ArrayComputations.ipynb 
   - caption: Session 2
     chapters:
   #   - file: content/UsingFunctions.ipynb
@@ -28,7 +27,7 @@ parts:
   #   - file: content/Session2_Asynchronous.ipynb
      - file: content/Session2_Notes_Framework.ipynb
      - file: content/Session2_Exercises.ipynb
-  - caption: Session 2 Review Videos \& Notes
+  - caption: Session 2 Review Videos and Notes
      chapters:
      - file: content/Indexing.ipynb
      - file: content/ComparisonandLogicalOperators.ipynb
