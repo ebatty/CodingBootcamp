@@ -180,7 +180,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Session 2 Exercises</a></li>
 
 
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 2 Review Videos and Notes</span></p>
 <ul class="nav bd-sidenav">
@@ -394,7 +393,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#image-manipulation">Image Manipulation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mystery-arrays">Mystery arrays</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spikes-data-part-2">Working with Spikes Data Part 2</a></li>
 </ul>
 
@@ -469,7 +467,7 @@ Loading in data that exists locally (if you are using a jupyter notebook for exa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f44107c4310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f193fffc050&gt;
 </pre></div>
 </div>
 <img alt="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" src="../_images/e9eaea2510f9cdd5de1b0071e10835ef52df464dfc2d856110a2595087a23da3.png" />
@@ -490,7 +488,7 @@ Loading in data that exists locally (if you are using a jupyter notebook for exa
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2099</span><span class="o">/</span><span class="mf">2680453085.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2187</span><span class="o">/</span><span class="mf">2680453085.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">horiz_img</span> <span class="o">=</span> <span class="o">...</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">horiz_img</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
@@ -543,7 +541,6 @@ Loading in data that exists locally (if you are using a jupyter notebook for exa
 <img alt="../_images/fb31bbf184fb6fb372210097ae6ad845034ae22002f715b799ac09965921d96c.png" src="../_images/fb31bbf184fb6fb372210097ae6ad845034ae22002f715b799ac09965921d96c.png" />
 </div>
 </div>
-<p>Click here for hint</p>
 <ol class="arabic simple" start="6">
 <li><p>It’s snowing! Let’s add some noise to the image and see what it looks like. Create an array the same size as img but containing uniformly distributed random numbers between 0 and 40. Add this noise to img and store as noisy_img. Type the line of code.
 Hint: check out the documentation for https://numpy.org/doc/stable/reference/random/generated/numpy.random.uniform.html</p></li>
@@ -561,7 +558,7 @@ Hint: check out the documentation for https://numpy.org/doc/stable/reference/ran
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2099</span><span class="o">/</span><span class="mf">2355702242.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2187</span><span class="o">/</span><span class="mf">2355702242.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">noisy_img</span> <span class="o">=</span> <span class="o">...</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">noisy_img</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
@@ -614,44 +611,6 @@ Hint: check out the documentation for https://numpy.org/doc/stable/reference/ran
 <img alt="../_images/fb31bbf184fb6fb372210097ae6ad845034ae22002f715b799ac09965921d96c.png" src="../_images/fb31bbf184fb6fb372210097ae6ad845034ae22002f715b799ac09965921d96c.png" />
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="mystery-arrays">
-<h1>Mystery arrays<a class="headerlink" href="#mystery-arrays" title="Permalink to this heading">#</a></h1>
-<p>The cell below loads in mystery data into an array called <code class="docutils literal notranslate"><span class="pre">x</span></code>. Try to figure out the “secret” contained in this data by plotting it in different ways.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">io</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/3sd2p/download&#39;</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Click here for hint</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Imagine the different rows are different data points.</span>
-<span class="sd">The two columns are different features about each data point.</span>
-<span class="sd">For example, each row might be a different human. Column 1 contains</span>
-<span class="sd">amount of chocolate eaten monthly and the second column</span>
-<span class="sd">contains a measure of happiness. What might you want to plot?</span>
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nImagine the different rows are different data points.\nThe two columns are different features about each data point.\nFor example, each row might be a different human. Column 1 contains\namount of chocolate eaten monthly and the second column\ncontains a measure of happiness. What might you want to plot?\n&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>What is the secret in this data?</p>
-<p>Your answer here</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="working-with-spikes-data-part-2">
 <h1>Working with Spikes Data Part 2<a class="headerlink" href="#working-with-spikes-data-part-2" title="Permalink to this heading">#</a></h1>
@@ -777,7 +736,6 @@ Hint: check out the documentation for https://numpy.org/doc/stable/reference/ran
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#image-manipulation">Image Manipulation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mystery-arrays">Mystery arrays</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-spikes-data-part-2">Working with Spikes Data Part 2</a></li>
 </ul>
 
