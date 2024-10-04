@@ -28,11 +28,11 @@ parts:
   #   - file: content/Session2_Asynchronous.ipynb
      - file: content/Session2_Notes_Framework.ipynb
      - file: content/Session2_Exercises.ipynb
-  # - caption: Session 2 Review Videos \& Notes
-  #    chapters:
-  #    - file: content/Indexing.ipynb
-  #    - file: content/ComparisonandLogicalOperators.ipynb
-  #    - file: content/BooleanIndexing.ipynb
+  - caption: Session 2 Review Videos \& Notes
+     chapters:
+     - file: content/Indexing.ipynb
+     - file: content/ComparisonandLogicalOperators.ipynb
+     - file: content/BooleanIndexing.ipynb
   #   - file: content/Session2_Exercises_Solutions.ipynb
   # - caption: Session 3
   #   chapters:
