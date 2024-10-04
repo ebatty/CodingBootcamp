@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Array Computations &#8212; SURFIN Coding Bootcamp</title>
+    <title>Boolean Indexing &#8212; SURFIN Coding Bootcamp</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/ArrayComputations';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/BooleanIndexing';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Session 2 Notes Framework" href="Session2_Notes_Framework.html" />
-    <link rel="prev" title="Intro to Arrays" href="IntrotoArrays.html" />
+    <link rel="next" title="If statements" href="IfStatements.html" />
+    <link rel="prev" title="Comparison &amp; Logical Operators" href="ComparisonandLogicalOperators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,12 +160,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Session1_Exercises_Solutions.html">Session 1 Exercises Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 1 Review Videos</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MathOperators.html">Math Operators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntrotoArrays.html">Intro to Arrays</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Array Computations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ArrayComputations.html">Array Computations</a></li>
 
 
 
@@ -183,12 +183,12 @@ const thebe_selector_output = ".output, .cell_output"
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 2 Review Videos and Notes</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Indexing.html">Indexing</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="ComparisonandLogicalOperators.html">Comparison &amp; Logical Operators</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="BooleanIndexing.html">Boolean Indexing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Boolean Indexing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 3</span></p>
 <ul class="nav bd-sidenav">
@@ -248,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/ArrayComputations.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/ebatty/CodingBootcamp/blob/main/content/BooleanIndexing.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/content/ArrayComputations.ipynb" target="_blank"
+      <li><a href="../_sources/content/BooleanIndexing.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,9 +366,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -379,24 +377,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Array Computations</h1>
+    <h1>Boolean Indexing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Array Computations</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-our-data">Setting up our data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#investigating-the-data">Investigating the data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-specific-computations">Axis-specific computations</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorization">Vectorization</a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -406,169 +391,112 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="array-computations">
-<h1>Array Computations<a class="headerlink" href="#array-computations" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=h_KYkTFkfNw
-</pre></div>
-</div>
-<div class="output text_html">
-        <iframe
-            width="730"
-            height="410"
-            src="https://www.youtube.com/embed/h_KYkTFkfNw?fs=1"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="setting-up-our-data">
-<h1>Setting up our data<a class="headerlink" href="#setting-up-our-data" title="Permalink to this heading">#</a></h1>
-<p>Let’s say we have an array of data with 2 rows and 3 columns.</p>
-<p>We can create the array as follows:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="boolean-indexing">
+<h1>Boolean Indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="investigating-the-data">
-<h1>Investigating the data<a class="headerlink" href="#investigating-the-data" title="Permalink to this heading">#</a></h1>
-<p>We can compute the shape of the array (to get the number of rows and columns)</p>
+<p>First, we’ll create an array that we’ll be indexing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1  0  9]
+ [ 3  4  1]
+ [ 2  4  1]
+ [ 3 10  1]]
 </pre></div>
 </div>
 </div>
 </div>
-<p>The first number outputted above is the number of rows, the second is the number of columns.</p>
-<p>We can also get the minimum and maximum values in the array</p>
+<p>Now, let’s grab all values greater than 5. First, we create a Boolean array that has True when the corresponding entry in x is greater than 5, False otherwise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can sum over all the values in the array, or get the mean of all values as follows:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6666666666666667
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="axis-specific-computations">
-<h1>Axis-specific computations<a class="headerlink" href="#axis-specific-computations" title="Permalink to this heading">#</a></h1>
-<p>We might want to get the mean per column or per row, instead of over the whole array. We can do this with the following code:</p>
-<p><code class="docutils literal notranslate"><span class="pre">np.mean(x,</span> <span class="pre">axis</span> <span class="pre">=</span> <span class="pre">?)</span></code></p>
-<p>Where the question mark is needs to be replaced with the axis that we want to compute over.</p>
-<p>The rows are axis 0, when we enter axis = 0 as an argument into the np.mean command, we are asking numpy to compute the mean over the rows (which would be the column means)</p>
-<p><img alt="picture" src="https://raw.githubusercontent.com/ebatty/CodingBootcamp/master/images/axes.png" /></p>
-<p>We can get the mean over rows with:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.66666667, 2.66666667])
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can get the mean over columns with:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 2., 1.])
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="vectorization">
-<h1>Vectorization<a class="headerlink" href="#vectorization" title="Permalink to this heading">#</a></h1>
-<p>If you do something like a math operation on an array, it will do element-wise operation</p>
-<p><img alt="picture" src="https://raw.githubusercontent.com/ebatty/CodingBootcamp/master/images/addition.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 1, 2],
-       [4, 5, 2]])
-</pre></div>
-</div>
-</div>
-</div>
-<p>If we do something like added two arrays of the same shape, that will also be element-wise.</p>
-<p><img alt="picture" src="https://raw.githubusercontent.com/ebatty/CodingBootcamp/master/images/addition_two_arrays.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boolean_array</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span>
 
-<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">boolean_array</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3, 3, 1],
-       [7, 5, 2]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[False False  True]
+ [False False False]
+ [False False False]
+ [False  True False]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we can index into x using that array and we get back all the entries in x where the corresponding entry in the boolean array is True</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">boolean_array</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 9, 10])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that we lose any structure in terms of where those entries occurred</p>
+<p>We can also use Boolean indexing to get specific rows if we have a Boolean array that is the length of the number of rows that consists of Trues and Falses.</p>
+<p>Let’s get the rows in x where the mean of the row is over 3.</p>
+<p>First, we can get the mean per row, then we can compare to 3 to get a boolean array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_per_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">boolean_array</span> <span class="o">=</span> <span class="n">mean_per_row</span> <span class="o">&gt;</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">boolean_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ True False False  True]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can use that to index into the rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">boolean_array</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1,  0,  9],
+       [ 3, 10,  1]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also do the same with columns.</p>
+<p>Below, we return columns that had mean greater than 3</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boolean_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span>
+
+<span class="n">x</span><span class="p">[:,</span> <span class="n">boolean_array</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0],
+       [ 4],
+       [ 4],
+       [10]])
 </pre></div>
 </div>
 </div>
@@ -607,20 +535,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="IntrotoArrays.html"
+       href="ComparisonandLogicalOperators.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intro to Arrays</p>
+        <p class="prev-next-title">Comparison &amp; Logical Operators</p>
       </div>
     </a>
     <a class="right-next"
-       href="Session2_Notes_Framework.html"
+       href="IfStatements.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Session 2 Notes Framework</p>
+        <p class="prev-next-title">If statements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -633,25 +561,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Array Computations</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-our-data">Setting up our data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#investigating-the-data">Investigating the data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-specific-computations">Axis-specific computations</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorization">Vectorization</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
