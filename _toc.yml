@@ -32,7 +32,7 @@ parts:
      - file: content/Indexing.ipynb
      - file: content/ComparisonandLogicalOperators.ipynb
      - file: content/BooleanIndexing.ipynb
-  #   - file: content/Session2_Exercises_Solutions.ipynb
+     - file: content/Session2_Exercises_Solutions.ipynb
   - caption: Session 3
     chapters:
      - file: content/IfStatements.ipynb
