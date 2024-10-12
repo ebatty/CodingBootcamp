@@ -37,6 +37,7 @@ parts:
     chapters:
      - file: content/IfStatements.ipynb
      - file: content/ForLoops.ipynb
+     - file: content/IndexingReview.ipynb
      - file: content/Session3_Notes_Framework.ipynb
      - file: content/Session3_Exercises.ipynb
   # - caption: Session 4
