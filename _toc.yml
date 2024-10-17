@@ -43,7 +43,7 @@ parts:
   - caption: Session 4
     chapters:
   #   - file: content/Session4_AsynchronousVersion.ipynb
-     - file: content/Session4_Framework.ipynb
+     - file: content/Session4_Review_Framework.ipynb
   # - caption: Session 5
   #   chapters:
   #   - file: content/PythonDataTypes.ipynb  
