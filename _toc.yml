@@ -40,10 +40,10 @@ parts:
      - file: content/IndexingReview.ipynb
      - file: content/Session3_Notes_Framework.ipynb
      - file: content/Session3_Exercises.ipynb
-  # - caption: Session 4
-  #   chapters:
+  - caption: Session 4
+    chapters:
   #   - file: content/Session4_AsynchronousVersion.ipynb
-  #   - file: content/Session4_Framework.ipynb
+     - file: content/Session4_Framework.ipynb
   # - caption: Session 5
   #   chapters:
   #   - file: content/PythonDataTypes.ipynb  
