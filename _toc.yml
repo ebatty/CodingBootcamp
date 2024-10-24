@@ -44,8 +44,10 @@ parts:
     chapters:
   #   - file: content/Session4_AsynchronousVersion.ipynb
      - file: content/Session4_Review_Framework.ipynb
-  # - caption: Session 5
-  #   chapters:
+  - caption: Session 5
+    chapters:
+     - file: content/Session5_Notes_Framework.ipynb
+     - file: content/Session5_Exercises.ipynb
   #   - file: content/PythonDataTypes.ipynb  
   #   - file: content/DNAParsing.ipynb
   #   - file: content/WritingFunctions.ipynb  
